@@ -21,17 +21,14 @@ end
 def first_under(array, limit)
   # TODO: Return the first number from an array that is less than limit.
   #       You should use Enumerable#find
-  array.find {|x| x if x.to_i < limit}
+  array.find { |x| x if x.to_i < limit }
 end
 
 def add_bang(array)
   # TODO: Take an array of strings and return a new array with "!" appended to each string.
   #       You should use Enumerable#map
-  array.map {|x| puts "#{x}!"}
-
+  array.map { |x| "#{x}!" }
 end
-
-add_bang(["salut", "cest", "cool"])
 
 def product(array)
   # TODO: Calculate the product of an array of numbers.
