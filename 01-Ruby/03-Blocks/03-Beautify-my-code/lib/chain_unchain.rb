@@ -1,6 +1,6 @@
 def shuffle_word(a_word)
   #TODO: refactor this method
-  shuffled_word_in_array = a_word.upcase.chars.shuffle
+  a_word.upcase.chars.shuffle
 end
 
 def quote_prime_numbers(n)
