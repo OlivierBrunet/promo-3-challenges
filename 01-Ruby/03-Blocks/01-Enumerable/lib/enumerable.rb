@@ -15,32 +15,34 @@ end
 def short_words(array, max_length)
   # TODO: Take and array of words, return the array of words not exceeding max_length characters
   #       You should use Enumerable#reject
-  max_length = 5
   array.reject {|x| x if x.size > max_length}
 end
 
 def first_under(array, limit)
   # TODO: Return the first number from an array that is less than limit.
   #       You should use Enumerable#find
-  limit = 50
   array.find {|x| x if x.to_i < limit}
 end
-
-first_under([49, 51, 54], 50)
 
 def add_bang(array)
   # TODO: Take an array of strings and return a new array with "!" appended to each string.
   #       You should use Enumerable#map
+  array.map {|x| puts "#{x}!"}
+
 end
+
+add_bang(["salut", "cest", "cool"])
 
 def product(array)
   # TODO: Calculate the product of an array of numbers.
   #       You should use of Enumerable#reduce
+
 end
 
 def sorted_pairs(array)
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
   #       You should make use of Enumerable#each_slice
+
 end
 
 
