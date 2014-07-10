@@ -10,10 +10,14 @@ end
 
 def timer_for
   #TODO:  Return time taken to execute the given block
+  time = Time.now
+  yield
+  Time.now - time
 end
 
 def transform(element)
   #TODO:  Simply execute the given block on element
+  yield(element)
 end
 
 puts tag("h1", ["id", "title"]) { "Some Title" }
