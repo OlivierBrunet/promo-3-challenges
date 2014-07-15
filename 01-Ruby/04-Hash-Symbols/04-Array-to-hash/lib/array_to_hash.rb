@@ -1,10 +1,11 @@
 def array_to_hash(array)
   #TODO: implement the method :)
-  my_hash = Hash.new
+  new_hash = {}
   array.each_with_index do |value, index|
-  my_hash[index] = value
+  new_hash[index] = value
+
   end
-  my_hash
+  new_hash
 end
 
 puts array_to_hash(["a","b","c"])
