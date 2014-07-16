@@ -16,14 +16,17 @@ class OrangeTree
     elsif (1..10).cover?(@age)
       @height = @age
     else
-     @height = 10
+      @height = 10
     end
   end
 
-
   def dead?
+    if (0..50).cover?(@age)
+    false
+    else @age > 100
+    true
+    end
   end
-
 
   def pick_a_fruit!(number)
   ##méthode pour pick (fruit_count - number)
