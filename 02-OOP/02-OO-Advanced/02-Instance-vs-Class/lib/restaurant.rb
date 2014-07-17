@@ -18,9 +18,13 @@ class Restaurant
     @average_rating = @rating_array.inject(:+) / @rating_array.size
   end
 
-  #def self.filter_by_city(restaurants, city)
-
-  #end
+  def self.filter_by_city(restaurants, city)
+  restaurants_list = []
+  restaurants.each do |restaurant|
+  restaurants_list << restaurant if restaurant.city == city
+  end
+  restaurants_list
+  end
 
 end
 
