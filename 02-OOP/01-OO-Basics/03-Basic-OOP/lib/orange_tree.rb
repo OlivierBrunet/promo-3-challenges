@@ -1,13 +1,18 @@
 class OrangeTree
   # TODO: Implement all the specs defined in the README.md :
+  attr_reader :height, :fruits
+
   def initialize
     @height = 0
     @fruits = 0
     @age = 0
+    @dead = false
   end
 
   def one_year_passes!
-    @age = @age + 1
+    @age += 1
+    height
+    fruits
   end
 
   def height
@@ -22,35 +27,28 @@ class OrangeTree
 
   def dead?
     if (0..50).cover?(@age)
-    false
+      false
     else @age > 100
-    true
+      true
     end
   end
 
-  def pick_a_fruit!(number)
-  ##méthode pour pick (fruit_count - number)
+  def fruits
+    @fruits = 0
+      if @age > 5 && @age <= 10
+        @fruits = 100
+      elsif @age > 10 && @age <= 15
+        @fruits = 200
+      else
+        @fruits = 0
+      end
   end
 
-  def fruit_count
-  ##méthode pour compter les fruits
-
+  def pick_a_fruit!
+    @fruits -= 1 if @fruits > 0
   end
+
+
 
 end
 
- orange_tree = OrangeTree.new
-
-
-#- You should be able to measure the tree
-#- Each year, the tree should age (it becomes older and taller, and eventually dies).
-#- A tree grows 1 meter per year until 10 years old. Then it stops.
-#- Before 50 years old, the proabability of dying as a year pass is zero.
-#- After 50 years old, the probability of dying increases
-#- No tree can live more than 100 years
-#- A tree will produce 100 fruits a year once it is 5 years old
-#- A tree will produce 200 fruits a year between 10 and 15 years old
-#- A tree will not produce any fruits after that
-#- You should be able to pick an fruit from the tree
-#- You should be able to count how many fruits on the tree there are left
-#- Every year, fruits which were not picked just fall off
