@@ -20,8 +20,8 @@ class Restaurant
 
   def self.filter_by_city(restaurants, city)
   restaurants_list = []
-  restaurants.each do |restaurant|
-  restaurants_list << restaurant if restaurant.city == city
+  restaurants.each do |resto|
+  restaurants_list << resto if resto.city == city
   end
   restaurants_list
   end
