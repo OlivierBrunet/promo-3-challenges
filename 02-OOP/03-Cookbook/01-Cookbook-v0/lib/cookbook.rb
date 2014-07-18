@@ -3,9 +3,9 @@ require 'csv'
 class Cookbook
   attr_reader :recipes, :file
 
-  def initialize
+  def initialize(file)
     @recipes = []
-    @file = "/home/olivierbrunet/code/OlivierBrunet/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/lib/recipes.csv"
+    @file = file
     load_csv
   end
 
@@ -15,7 +15,7 @@ class Cookbook
     end
   end
 
-  def add(recipe)
+  def add_recipe(recipe)
     @recipes << recipe
     update
   end
