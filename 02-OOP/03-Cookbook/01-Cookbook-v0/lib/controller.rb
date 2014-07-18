@@ -1,14 +1,12 @@
-require_relative "cookbook.rb"
+require_relative "cookbook"
 
 class Controller
-  def initialize
-    @cookbook = Cookbook.new
+  def initialize(file)
+    @cookbook = Cookbook.new(file)
   end
 
   def display_recipe
-    @cookbook.each_with_index do |recipe, index|
-    puts "#{index} - #{recipe}"
-    end
+    @recipes
   end
 
   def delete_recipe
