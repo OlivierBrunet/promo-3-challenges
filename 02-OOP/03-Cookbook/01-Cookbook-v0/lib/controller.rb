@@ -1,9 +1,20 @@
-require_relative 'cookbook'
+require_relative "cookbook.rb"
 
 class Controller
-  def initialize(file)
-    # Here you should instantiate the Cookbook model with the file
+  def initialize
+    @cookbook = Cookbook.new
   end
 
-  # TODO: Implement the methods to retrieve, add, and delete recipes through the model
+  def display_recipe
+    @cookbook.each_with_index do |recipe, index|
+    puts "#{index} - #{recipe}"
+    end
+  end
+
+  def delete_recipe
+    @cookbook.remove
+  end
+
 end
+
+display_recipe
