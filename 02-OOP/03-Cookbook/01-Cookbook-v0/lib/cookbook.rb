@@ -32,6 +32,10 @@ class Cookbook
       end
     end
   end
+
+  def list
+  @recipes
+  end
 end
 
 

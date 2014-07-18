@@ -6,7 +6,7 @@ class Controller
   end
 
   def display_recipe
-    @recipes
+    @recipes.list
   end
 
   def delete_recipe
