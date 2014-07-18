@@ -2,17 +2,21 @@ require_relative "cookbook"
 
 class Controller
   def initialize(file)
-    @cookbook = Cookbook.new(file)
+    @recipes = Cookbook.new(file)
   end
 
   def display_recipe
     @recipes.list
   end
 
-  def delete_recipe
-    @cookbook.remove
+  def add(name)
+    @recipes.add_recipe(name)
+  end
+
+  def delete(id)
+    @recipes.remove(id)
   end
 
 end
 
-display_recipe
+
