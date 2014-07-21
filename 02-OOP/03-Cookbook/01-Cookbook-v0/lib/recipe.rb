@@ -1,8 +1,10 @@
 class Recipe
 
-  def initialize
-  @name = name
-  @description = description
+  attr_reader :name, :description
+
+  def initialize(name, description)
+    @name = name
+    @description = description
   end
 
 end

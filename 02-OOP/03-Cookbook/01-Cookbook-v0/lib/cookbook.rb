@@ -1,37 +1,40 @@
 require 'csv'
+require_relative 'recipe'
+require_relative "view"
+require_relative "controller"
 
 class Cookbook
-  attr_reader :recipes, :file
 
-  def initialize(csv_file)
+  attr_reader :recipes
+
+  def initialize(csv_file_path)
+    @filepath = csv_file_path
     @recipes = []
-    @csv_file = csv_file
-    load_csv
+    load_csv(@filepath)
   end
 
-  def load_csv
-    CSV.foreach(@csv_file) do |row|
-      @recipes << { :name => row[0], :description => row[1] }
+  def load_csv(file)
+    CSV.foreach(file) do |row|
+      @recipes << Recipe.new(row[0], row[1])
+    end
+  end
+
+  def save
+    CSV.open(@filepath, 'w') do |csv|
+      @recipes.each do |recipe|
+        csv << [recipe.name, recipe.description]
+      end
     end
   end
 
   def add_recipe(recipe)
     @recipes << recipe
-    update
+    save
   end
 
-  def remove_recipe(index)
-    @recipes.delete_at(index)
-    update
+  def remove_recipe(recipe_id)
+     @recipes.delete_at(recipe_id)
+     save
   end
 
-  def update
-    CSV.open(@csv_file, "w") do |csv|
-      @recipes.each do |recipe|
-        csv << [recipe]
-      end
-    end
-  end
 end
-
-

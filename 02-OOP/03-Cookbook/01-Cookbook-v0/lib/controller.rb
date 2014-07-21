@@ -1,22 +1,29 @@
 require_relative "cookbook"
+require_relative "view"
+require_relative "recipe"
 
 class Controller
+
   def initialize(cookbook)
-    @recipes = Cookbook.new(cookbook)
+    @cookbook = cookbook
+    @view = View.new
   end
 
   def list
-    @recipes
+    @view.list(@cookbook.recipes)
   end
 
   def create
-    @recipes.add_recipe
+    name = @view.add_recipe_name
+    description = @view.add_recipe_description
+    new_recipe = Recipe.new(name,description)
+    @cookbook.add_recipe(new_recipe)
   end
 
-  def destroy(id)
-    @recipes.remove_recipe(id)
+  def destroy
+    id_recipe = @view.destroy_recipe
+    @cookbook.remove_recipe(id_recipe)
   end
+
 
 end
-
-
