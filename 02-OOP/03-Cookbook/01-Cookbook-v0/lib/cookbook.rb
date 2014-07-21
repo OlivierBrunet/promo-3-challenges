@@ -11,7 +11,7 @@ class Cookbook
 
   def load_csv
     CSV.foreach(@csv_file) do |row|
-    @recipes << { name: row[0], description: row[1] }
+      @recipes << { :name => row[0], :description => row[1] }
     end
   end
 
@@ -28,7 +28,7 @@ class Cookbook
   def update
     CSV.open(@csv_file, "w") do |csv|
       @recipes.each do |recipe|
-      csv << [recipe]
+        csv << [recipe]
       end
     end
   end
