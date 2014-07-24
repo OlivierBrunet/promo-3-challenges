@@ -37,62 +37,65 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="173" y="192" name="users">
+</datatypes><table x="113" y="445" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
+<default>NULL</default></row>
+<row name="name" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="94" y="103" name="answers">
+<row name="id" null="1" autoincrement="1">
+<datatype>TINYINT</datatype>
+<default>NULL</default></row>
+<row name="content" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="survey_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="surveys" row="id" />
 </row>
-<row name="name" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="667" y="191" name="surveys">
+<table x="768" y="236" name="surveys">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="question" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="answer_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="446" y="406" name="votes">
-<row name="id" null="1" autoincrement="1">
-<datatype>TINYINT</datatype>
+<datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="users" row="id" />
 </row>
-<row name="survey_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><relation table="surveys" row="id" />
-</row>
-<row name="number" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><relation table="users" row="id" />
-</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="420" y="51" name="answers">
+<table x="417" y="244" name="votes">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
-<row name="number" null="1" autoincrement="0">
+<row name="survey_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="surveys" row="id" />
+</row>
+<row name="answer_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="answers" row="id" />
+</row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="users" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
