@@ -1,4 +1,5 @@
 require 'sqlite3'
+require_relative ''
 
 def create_scheme(db)
   #TODO: create your db scheme
