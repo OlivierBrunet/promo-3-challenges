@@ -1,6 +1,55 @@
 .container {
-  margin: 0 auto;  
+  margin: 0 auto;
   width: 840px;
 }
 
-/*Add some CSS rules to design your form */ 
+/*Add some CSS rules to design your form */
+body {
+background-image:url(http://thepatternlibrary.com/img/s.png)
+}
+
+form {
+ background-color:white;
+ padding:10px;
+ width:280px;
+ margin-left:250px;
+ margin-top:-50px;
+ border:1px solid red;
+ box-shadow:1px 1px 2px red;
+ opacity:0.8;
+ }
+
+h1 {
+  font-family: Helvetica;
+  font-size: 75px;
+  margin-top:5px;
+  margin-right:1000px;
+  width:1000px;
+  height:200px;
+}
+
+label {
+ font-family: Helvetica;
+ margin-top:10px;
+ display:block;
+}
+
+label.inline {
+ display:inline;
+ margin-right:50px;
+ }
+
+ input, textarea, select, option {
+ background-color:#FFF3F3;
+ }
+
+input, textarea, select {
+ padding:3px;
+ border:1px solid #F5C5C5;
+ border-radius:5px;
+ width:200px;
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ }
+select {
+ margin-top:10px;
+ }
