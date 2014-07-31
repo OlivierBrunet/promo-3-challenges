@@ -1,0 +1,93 @@
+body {
+  background-image: url("http://www.iceme.fr/images/grid.jpg");
+  font-family: 'Open Sans';
+}
+
+
+.wraper {
+  background-image:url(http://www.iceme.fr/images/background/background.jpg);
+  background-size: cover;
+  height: 650px;
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.lead {
+  margin-bottom: 20px;
+  font-weight: 300;
+  line-height: 1.4
+}
+
+.lead h1 {
+  font-size: 72px;
+  font-weight: normal;
+  text-shadow: 0 0 20px
+  rgba(0, 0, 0, .8);
+}
+
+.lead h2 {
+  background: rgba(0, 0, 0, .4);
+  display: inline-block;
+  padding: 0.2em;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 2em;
+}
+
+.list-inline {
+padding-left: 0;
+margin-left: -5px;
+list-style: none;
+}
+
+.btn-primary:hover {
+  background: red;
+  border:red;
+}
+
+.vertical-spacer {
+  height: 8em;
+}
+
+.feature img {
+  margin-bottom: 2em;
+}
+
+div {
+display: block;
+}
+
+.feature img {
+  margin-bottom: 2em;
+}
+
+.feature {
+  color: #444444;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#footer {
+  background-color: #222;
+  color: #aaaaaa;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+#footer a {
+  color: #cccccc;
+}
+
+#footer a:hover {
+  color: white;
+}
+
+.social a {
+  font-size: 24px;
+}
+
+.social a:hover {
+  text-decoration: none;
+}
