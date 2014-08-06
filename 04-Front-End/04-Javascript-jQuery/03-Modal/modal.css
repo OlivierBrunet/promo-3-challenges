@@ -1,0 +1,26 @@
+#logo {
+  text-align: center;
+  padding-top: 300px;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+#modal {
+  border: 1px solid;
+  background-color: white;
+  height: 50%;
+  width: 50%;
+
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  z-index: 1000;
+}
+
+#modal img {
+  text-align: center;
+  vertical-align: middle;
+}
