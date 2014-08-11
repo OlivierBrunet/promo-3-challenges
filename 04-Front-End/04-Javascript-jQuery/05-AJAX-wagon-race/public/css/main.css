@@ -2,14 +2,21 @@
   border: solid 1px black;
   width: 100px;
   height: 35px;
-  margin: 0 auto;
   border-radius: 100;
   text-align: center;
-  margin-top: 100px;
+  margin-left: 600px;
+}
+
+#board {
+  display: none;
 }
 
 #names-form {
   display: none;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  margin-left: 600px;
 }
 
 .start-hidden {
@@ -38,12 +45,12 @@
   border: 1px solid #bbb;
 }
 
-.racer_table #player1_race td.active {
+.racer_table #player1 td.active {
   background: url('../img/player_1.png') no-repeat;
   background-size: 30px;
 }
 
-.racer_table #player2_race td.active {
+.racer_table #player2 td.active {
   background: url('../img/player_2.png') no-repeat;
   background-size: 30px;
 }

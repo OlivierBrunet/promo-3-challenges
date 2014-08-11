@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JAJAX Wagon Race</title>
+    <title>AJAX Wagon Race</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 
     <br/>
     <br/>
     <br/>
-    <button id="start-btn" class="start-hidden">Create game</button>
+    <button id="start-btn" class="start-hidden">Play</button>
     <br/>
     <form id="names-form" class="start-hidden" method="post">
       <p>
@@ -32,13 +32,8 @@
     </form>
 
 
-    <div class="players">
-      <div id="player1_hint"></div>
-      <div id="player2_hint"></div>
-    </div>
-
-    <table class="racer_table">
-      <tr id="player1_race">
+    <table id="board" class="racer_table">
+      <tr id="player1">
         <td class="active"></td>
         <td></td>
         <td></td>
@@ -47,7 +42,7 @@
         <td></td>
         <td></td>
       </tr>
-      <tr id="player2_race">
+      <tr id="player2">
         <td class="active"></td>
         <td></td>
         <td></td>
@@ -59,5 +54,5 @@
     </table>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="game.js"></script>
+    <script src="js/game.js"></script>
 </html>

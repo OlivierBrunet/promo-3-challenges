@@ -24,6 +24,7 @@ $(function() {
   var session_id,
       start_button = $('#start-btn'),
       names_form = $('#names-form'),
+      board = $('#board')
       player1 = $('#player1'),
       player2 = $('#player2');
 
@@ -48,9 +49,10 @@ $(function() {
         { name: name_player2 }
       ]
     });
+
     $.post('http://localhost:4567/session/'+session_id+'/game/create', data, function(data_json) {
         names_form.hide();
-        $('#board').show();
+        board.show();
         $(document).on('keyup', function(e) {
             if (e.keyCode == 81) {
                 forward(player1);
@@ -60,5 +62,9 @@ $(function() {
             }
         });
     });
+
+
   });
+
+
 });
